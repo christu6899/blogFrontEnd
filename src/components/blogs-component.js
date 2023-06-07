@@ -40,12 +40,10 @@ const BlogsComponent = (props) => {
       });
   };
   return (
-    <div className="d-flex  justify-content-center">
+    <div className="d-flex  justify-content-center py-3 mb-4">
       {currentUser && blogData.length == 0 && (
         <div>
-          <h3>
-            there's no blog right now click Write to write your first blog
-          </h3>
+          <h3>趕快來寫第一篇部落格吧!</h3>
         </div>
       )}
       {currentUser && blogData && blogData.length !== 0 && (

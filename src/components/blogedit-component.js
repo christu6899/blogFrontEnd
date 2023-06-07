@@ -47,10 +47,10 @@ const BlogEditComponent = (props) => {
 
       <div
         style={{ padding: "3rem" }}
-        className=" d-flex flex-column justify-content-center"
+        className=" d-flex flex-wrap justify-content-center"
       >
-        <h1>Edit Page</h1>
         <div>
+          <h1>Edit Page</h1>
           <div className="form-group">
             <label htmlFor="Title">Title</label>
             <input

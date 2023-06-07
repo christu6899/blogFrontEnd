@@ -20,9 +20,7 @@ const LoginComponent = (props) => {
         if (response.data.token) {
           localStorage.setItem("user", JSON.stringify(response.data));
         }
-        window.alert(
-          "Login successfully, you are now redirected to the profile page."
-        );
+        window.alert("登入成功, 即將導向主頁.");
         setCurrentUser(AuthService.getCurrentUser());
         navigate("/blogs", { replace: true });
       })
@@ -33,8 +31,10 @@ const LoginComponent = (props) => {
   };
   return (
     <div style={{ padding: "3rem" }} className=" d-flex justify-content-center">
-      {message && <div className="alert alert-danger">{message}</div>}
       <div>
+        <div className="form-group">
+          {message && <div className="alert alert-danger ">{message}</div>}
+        </div>
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
