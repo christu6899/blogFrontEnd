@@ -33,7 +33,7 @@ const BlogEditComponent = (props) => {
     blogService
       .edit(editBlogId, title, content)
       .then(() => {
-        alert("update successfully");
+        alert("文章更新成功");
         navigate("/blogs", { replace: true });
       })
       .catch((error) => {

@@ -7,7 +7,7 @@ const NavComponent = (props) => {
   let navigate = useNavigate();
   const handleLogout = () => {
     AuthService.logout();
-    window.alert("Logout Successfully, now you are redirect to the homepage.");
+    window.alert("登出成功，重新導向登入介面");
     setCurrentUser(null);
     navigate("/login", { replace: true });
   };

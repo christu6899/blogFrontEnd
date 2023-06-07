@@ -17,7 +17,7 @@ const BlogWriteComponent = (props) => {
     blogService
       .post(title, content)
       .then(() => {
-        window.alert("New blog has been created.");
+        window.alert("新文章建立成功");
         navigate("/blogs", { replace: true });
       })
       .catch((error) => {
