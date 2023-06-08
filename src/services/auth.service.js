@@ -1,5 +1,6 @@
 import axios from "axios";
-const API_URL = process.env.BACKEND_HOST + "/api/user";
+const API_URL =
+  "http://ec2-43-206-210-38.ap-northeast-1.compute.amazonaws.com:8080/api/user";
 
 class AuthService {
   logout() {
