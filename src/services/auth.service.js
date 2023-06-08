@@ -1,5 +1,6 @@
 import axios from "axios";
-const API_URL = "https://blog-service-demo.onrender.com/api/user";
+import "dotenv/config.js";
+const API_URL = process.env.BACKEND_HOST + "/api/user";
 
 class AuthService {
   logout() {

@@ -1,6 +1,6 @@
 import axios from "axios";
-
-const API_URL = "https://blog-service-demo.onrender.com/api/blogs";
+import "dotenv/config.js";
+const API_URL = process.env.BACKEND_HOST + "/api/blogs";
 
 class BlogService {
   post(title, content) {
