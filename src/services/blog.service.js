@@ -1,6 +1,6 @@
 import axios from "axios";
 const API_URL =
-  "https://ec2-43-206-210-38.ap-northeast-1.compute.amazonaws.com:8080/api/blogs";
+  "http://blog-616945270.ap-northeast-1.elb.amazonaws.com/api/blogs";
 
 class BlogService {
   post(title, content) {
