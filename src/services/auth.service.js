@@ -1,5 +1,4 @@
 import axios from "axios";
-import "dotenv/config.js";
 const API_URL = process.env.BACKEND_HOST + "/api/user";
 
 class AuthService {
