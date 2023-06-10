@@ -15,7 +15,7 @@ const ProfileComponent = (props) => {
                 <strong>{currentUser.foundUser.username}</strong>
               </h3>
             </header>
-            <p>
+            <p className="text-break">
               <strong>
                 Token:
                 {currentUser.token}
