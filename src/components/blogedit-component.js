@@ -49,10 +49,10 @@ const BlogEditComponent = (props) => {
         style={{ padding: "3rem" }}
         className=" d-flex flex-wrap justify-content-center"
       >
-        <div>
+        <div className="col-lg-6">
           <h1>Edit Page</h1>
           <div className="form-group">
-            <label htmlFor="Title">Title</label>
+            <label htmlFor="Title">標題</label>
             <input
               onChange={titleHandler}
               type="text"
@@ -63,8 +63,9 @@ const BlogEditComponent = (props) => {
           </div>
           <br />
           <div className="form-group">
-            <label htmlFor="password">Content</label>
+            <label htmlFor="password">內容</label>
             <textarea
+              style={{ height: "200px", fontSize: "16px" }}
               className="form-control"
               id="exampleforContent"
               name="content"

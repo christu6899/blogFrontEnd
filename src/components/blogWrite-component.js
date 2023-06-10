@@ -31,9 +31,9 @@ const BlogWriteComponent = (props) => {
 
       <div
         style={{ padding: "3rem" }}
-        className=" d-flex flex-wrap justify-content-center "
+        className="d-flex flex-wrap justify-content-center"
       >
-        <div>
+        <div className="col-lg-6">
           <h1>Write Page</h1>
 
           <div className="form-group">
@@ -49,7 +49,8 @@ const BlogWriteComponent = (props) => {
           <div className="form-group">
             <label htmlFor="password">內容</label>
             <textarea
-              className="form-control"
+              style={{ height: "200px", fontSize: "16px" }}
+              className="form-control "
               id="exampleforContent"
               name="content"
               onChange={contentHandler}

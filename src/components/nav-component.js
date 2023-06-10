@@ -14,14 +14,14 @@ const NavComponent = (props) => {
 
   return (
     <div className="container">
-      <header className="d-flex flex-wrap justify-content-end py-3 mb-4 border-bottom">
+      <header className="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
         <a
           href="/blogs"
-          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+          className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
         >
-          <span class="fs-4">BLOG</span>{" "}
+          <span className="fs-4">BLOG</span>
         </a>
-        <ul className="nav nav-pills ">
+        <ul className="nav nav-pills">
           {currentUser && (
             <li className="nav-item">
               <Link to="/blogs" className="nav-link">

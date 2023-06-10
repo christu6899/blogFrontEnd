@@ -47,38 +47,38 @@ const BlogsComponent = (props) => {
         </div>
       )}
       {currentUser && blogData && blogData.length !== 0 && (
-        <div className="">
-          {blogData.map((blog) => (
-            <div
-              key={blog.id}
-              className=" card mb-4"
-              style={{ width: "18rem" }}
-            >
-              <div className="card-body">
-                <h5 className="card-title">{blog.title}</h5>
-                <p className="card-text">{blog.content}</p>
-                <div className="d-flex  justify-content-between">
-                  <button
-                    onClick={() => {
-                      blogEdit(blog.id);
-                    }}
-                    className="btn btn-primary"
-                  >
-                    Edit
-                  </button>
-                  <button
-                    onClick={() => {
-                      blogDelete(blog.id);
-                    }}
-                    className="btn btn-danger"
-                  >
-                    Delete
-                  </button>
+        <div className="container">
+          <div className="row">
+            {blogData.map((blog) => (
+              <div key={blog.id} className=" col-md-4 mb-4">
+                <div className="card">
+                  <div className="card-body">
+                    <h5 className="card-title">{blog.title}</h5>
+                    <p className="card-text">{blog.content}</p>
+                    <div className="d-flex  justify-content-end">
+                      <button
+                        onClick={() => {
+                          blogEdit(blog.id);
+                        }}
+                        className="btn btn-primary"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => {
+                          blogDelete(blog.id);
+                        }}
+                        className="btn btn-danger"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                    <br />
+                  </div>
                 </div>
-                <br />
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       )}
     </div>

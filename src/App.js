@@ -12,7 +12,7 @@ function App() {
   let [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser());
   let [editBlogId, setEditBlogId] = useState(null);
   return (
-    <div className="App">
+    <div className="App ">
       <NavComponent currentUser={currentUser} setCurrentUser={setCurrentUser} />
       <Routes>
         <Route
