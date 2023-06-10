@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = "https://blog.christu6899.com/api/user";
+const API_URL = "https://api.christu6899.com/api/user";
 
 class AuthService {
   logout() {
