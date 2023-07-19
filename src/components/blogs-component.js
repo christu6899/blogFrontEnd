@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import blogService from "../services/blog.service";
 import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
+
 const BlogsComponent = (props) => {
   let navigate = useNavigate();
-  let { currentUser, setCurrentUser, editBlogId, setEditBlogId } = props;
+  let { currentUser, setEditBlogId } = props;
   let [blogData, setBlogData] = useState([]);
   useEffect(() => {
     console.log("Using effect.");

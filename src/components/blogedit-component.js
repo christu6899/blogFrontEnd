@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import blogService from "../services/blog.service";
 const BlogEditComponent = (props) => {
   let navigate = useNavigate();
-  let { currentUser, setCurrentUser, editBlogId, setEditBlogId } = props;
+  let { editBlogId } = props;
   let [blogData, setBlogData] = useState([]);
   let [message, setMessage] = useState("");
   let [title, setTitle] = useState("");

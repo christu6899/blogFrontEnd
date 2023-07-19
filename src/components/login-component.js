@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import AuthService from "../services/auth.service";
 const LoginComponent = (props) => {
   let navigate = useNavigate();
-  let { currentUser, setCurrentUser } = props;
+  let { setCurrentUser } = props;
   let [password, setPassword] = useState("");
   let [email, setEmail] = useState("");
   let [message, setMessage] = useState("");

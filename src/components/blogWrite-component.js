@@ -3,7 +3,6 @@ import { useNavigate } from "react-router";
 import blogService from "../services/blog.service";
 const BlogWriteComponent = (props) => {
   let navigate = useNavigate();
-  let { currentUser, setCurrentUser } = props;
   let [message, setMessage] = useState("");
   let [title, setTitle] = useState("");
   let [content, setContent] = useState("");
