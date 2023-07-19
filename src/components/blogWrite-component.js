@@ -6,12 +6,18 @@ const BlogWriteComponent = (props) => {
   let [message, setMessage] = useState("");
   let [title, setTitle] = useState("");
   let [content, setContent] = useState("");
+
+  //取得使用者輸入的blog title
   const titleHandler = (e) => {
     setTitle(e.target.value);
   };
+
+  //取定使用者輸入的blog content
   const contentHandler = (e) => {
     setContent(e.target.value);
   };
+
+  //提交按鈕call api新增blog
   const handleSubmit = () => {
     blogService
       .post(title, content)
@@ -24,6 +30,8 @@ const BlogWriteComponent = (props) => {
         setMessage(error.response.data);
       });
   };
+
+  //blog wirte 頁面
   return (
     <div>
       {message && <div className="alert alert-danger">{message}</div>}

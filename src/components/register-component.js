@@ -7,15 +7,23 @@ const RegisterComponent = () => {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   let [message, setMessage] = useState("");
+
+  //取得使用者輸入的email
   const emailHandler = (e) => {
     setEmail(e.target.value);
   };
+
+  //取得使用者輸入的使用者名稱
   const usernameHandler = (e) => {
     setUsername(e.target.value);
   };
+
+  //取得用戶輸入的密碼
   const passwordHandler = (e) => {
     setPassword(e.target.value);
   };
+
+  //註冊按鈕 call api 註冊使用者
   const handleRegister = () => {
     AuthService.register(username, email, password)
       .then(() => {

@@ -5,6 +5,8 @@ import AuthService from "../services/auth.service";
 const NavComponent = (props) => {
   let { currentUser, setCurrentUser } = props;
   let navigate = useNavigate();
+
+  //登出按鈕刪除瀏覽器是用者資訊
   const handleLogout = () => {
     AuthService.logout();
     window.alert("登出成功，重新導向登入介面");
@@ -12,6 +14,7 @@ const NavComponent = (props) => {
     navigate("/login", { replace: true });
   };
 
+  //nav bar
   return (
     <div className="container">
       <header className="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">

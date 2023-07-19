@@ -7,12 +7,17 @@ const LoginComponent = (props) => {
   let [password, setPassword] = useState("");
   let [email, setEmail] = useState("");
   let [message, setMessage] = useState("");
+
+  //取得用戶輸入email
   const emailHandler = (e) => {
     setEmail(e.target.value);
   };
+  //取得用戶輸入密碼
   const passwordHandler = (e) => {
     setPassword(e.target.value);
   };
+
+  //call api 登入
   const handleLogin = () => {
     AuthService.login(email, password)
       .then((response) => {
@@ -29,6 +34,8 @@ const LoginComponent = (props) => {
         setMessage(error.response.data);
       });
   };
+
+  //登入頁面
   return (
     <div style={{ padding: "3rem" }} className=" d-flex justify-content-center">
       <div>

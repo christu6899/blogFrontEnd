@@ -1,6 +1,8 @@
 import React from "react";
 const ProfileComponent = (props) => {
   let { currentUser } = props;
+
+  //個人資料頁面
   return (
     <div style={{ padding: "3rem" }} className="container">
       {!currentUser && (

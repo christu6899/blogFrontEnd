@@ -8,13 +8,16 @@ const BlogEditComponent = (props) => {
   let [message, setMessage] = useState("");
   let [title, setTitle] = useState("");
   let [content, setContent] = useState("");
+  //取得使用者更新的blog title
   const titleHandler = (e) => {
     setTitle(e.target.value);
   };
+  //取定使用者更新的blog content
   const contentHandler = (e) => {
     setContent(e.target.value);
   };
 
+  //取得當前edit頁面指定的blog
   useEffect(() => {
     console.log(editBlogId);
     blogService
@@ -29,6 +32,7 @@ const BlogEditComponent = (props) => {
       });
   }, []);
 
+  //call api 更新blog
   const handleSubmit = () => {
     blogService
       .edit(editBlogId, title, content)
@@ -41,6 +45,7 @@ const BlogEditComponent = (props) => {
         setMessage(error.response.data);
       });
   };
+  //edit 頁面內容
   return (
     <div>
       {message && <div className="alert alert-danger">{message}</div>}

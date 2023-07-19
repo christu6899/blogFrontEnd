@@ -6,6 +6,8 @@ const BlogsComponent = (props) => {
   let navigate = useNavigate();
   let { currentUser, setEditBlogId } = props;
   let [blogData, setBlogData] = useState([]);
+
+  //call api 取得該用戶blogs
   useEffect(() => {
     console.log("Using effect.");
     let id;
@@ -24,10 +26,14 @@ const BlogsComponent = (props) => {
         console.log(err);
       });
   }, []);
+
+  //edit頁面跳轉
   const blogEdit = (blog_id) => {
     setEditBlogId(blog_id);
     navigate("/editBlog", { replace: true });
   };
+
+  //call api刪除blog
   const blogDelete = (blog_id) => {
     blogService
       .delete(blog_id)
@@ -39,6 +45,8 @@ const BlogsComponent = (props) => {
         console.log(err);
       });
   };
+
+  //blog 頁面內容
   return (
     <div className="d-flex  justify-content-center py-3 mb-4">
       {currentUser && blogData.length == 0 && (
