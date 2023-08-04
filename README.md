@@ -1,6 +1,6 @@
 # Blog Frontend Demo
 
-部屬在雲端: blog.christu6899.com
+部屬在雲端: [展示連結](http://blog.christu6899.com)  
 
 簡單的網頁前端，可以讓使用者註冊與登入並顯示使用者所撰寫的文章。
 
